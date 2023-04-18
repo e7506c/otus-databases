@@ -7,18 +7,18 @@ brew install postgresql
 
 Unix like:
 
-```commandline
+```bash
 sudo apt-get install libpq-dev python-dev
 ```
 
 ### Run all containers with databases:
-```commandline
+```bash
 make up
 ```
 ### To run particular container check [Makefile](Makefile)
 
 ### Stop all containers:
-```commandline
+```bash
 make down
 ```
 
