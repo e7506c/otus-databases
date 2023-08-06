@@ -34,5 +34,6 @@ select_from_table(cursor)
 cursor.execute(f'DELETE FROM {TABLE_NAME} where name=%s', ('Alice',))
 select_from_table(cursor)
 
+cursor.close()
 # close the connection
 conn.close()

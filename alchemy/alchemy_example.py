@@ -55,5 +55,15 @@ print('-> Query with predicate: age > 25')
 for row in results:
     print(row.id, row.name, row.age)
 
+# Query the records with predicate
+query = session.query(PersonsTable).filter(
+    PersonsTable.age > 25,
+    PersonsTable.name.startswith('A')
+)
+results = query.all()
+print('-> Query with predicate: age > 25 and name start with "A"')
+for row in results:
+    print(row.id, row.name, row.age)
+
 # Close the session
 session.close()

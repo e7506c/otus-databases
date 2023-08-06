@@ -23,11 +23,17 @@ while True:
     try:
         cursor.execute(sql_stmt)
         results = cursor.fetchall()
-
-        for row in results:
-            print(row)
+        if results:
+            for row in results:
+                print(row)
+        else:
+            print(f'Nothing found for {some_name}')
     except Exception as err:
         print(err)
 
 cursor.close()
 connection.close()
+
+# Fix
+# sql_stmt = f"SELECT * FROM {TABLE_NAME} WHERE name=%s"
+# cursor.execute(sql_stmt, (some_name, ))

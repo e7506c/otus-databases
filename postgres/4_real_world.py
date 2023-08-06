@@ -16,6 +16,11 @@ class Person2:
     name: str
     age: int
 
+    # @classmethod
+    # def from_row(cls, values: dict):
+    #     values = {k: v for k, v in values.items() if k != 'id'}
+    #     return cls(**values)
+
 
 insert_stmt = f'INSERT INTO {TABLE_NAME} (name, age) VALUES (%s, %s);'
 data = [
